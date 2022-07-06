@@ -1,11 +1,13 @@
 class Car {
-    constructor (){
+    constructor (license, driver){
         this.id;
-        this.license;
-        this.driver;
+        this.license = license;
+        this.driver = driver;
         this.passenger;
     }
-    
+    showData = () => {
+        console.log(`Driver: ${this.driver.name} \nDriver document: ${this.driver.document} \nCar license: ${this.license}`);
+    }
 }
 // const car = new Car();
 
