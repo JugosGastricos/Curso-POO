@@ -1,10 +1,5 @@
-// import Car from "./car.js";
-
-const car = new Car("AMG063", new Account("Mercedes Campuzano", "LOL420"));
-car.passenger = 4;
-
-console.log(car);
-car.printDataCar();
+const uberX = new UberX("AMG063", new Account("Mercedes Campuzano", "LOL420"), "Chevrolet", "Spark");
+uberX.printDataCar(uberX.brand, uberX.model);
 
 const car2 = new Car();
 car2.license = "FUK069";
