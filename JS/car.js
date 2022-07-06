@@ -5,7 +5,7 @@ class Car {
         this.driver = driver;
         this.passenger;
     }
-    showData = () => {
+    printDataCar = () => {
         console.log(`Driver: ${this.driver.name} \nDriver document: ${this.driver.document} \nCar license: ${this.license}`);
     }
 }
