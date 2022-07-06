@@ -10,8 +10,8 @@ class Car {
         $this->license = $license;
     }
 
-    public function printDataCar(){
-        echo "License: $this->license, Driver: {$this->driver->name}, Document: {$this->driver->document}";
+    public function printDataCar($brand, $model){
+        echo "License: $this->license, Driver: {$this->driver->name}, Document: {$this->driver->document}, Brand: $brand, Model: $model </br>";
     }
 }
 ?>
