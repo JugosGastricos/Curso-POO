@@ -1,10 +1,10 @@
 package Java;
 
 class Car {
-    Integer id;
-    String license;
-    Account driver;
-    private Integer passenger;
+    private Integer id;
+    private String license;
+    private Account driver;
+    protected Integer passenger;
 
     public Car(String license, Account driver){
         this.license = license;
@@ -12,10 +12,10 @@ class Car {
     }
 
     void printDataCar() {
-        if(driver != null && passenger != null && license != null){
-        System.out.println("Driver name: " + driver.name + "\nLicense: " + license + "\nPassengers: " + passenger);
-        } else {
+        if(driver == null || license == null || passenger == null){
             System.err.println("Ingresa los datos requeridos");
+        } else {
+            System.out.println("Driver name: " + driver.name + "\nLicense: " + license + "\nPassengers: " + passenger);
         }
     }
     
@@ -30,4 +30,30 @@ class Car {
             System.err.println("El carro debe permitir 4 pasajeros");
         }
     }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getLicense() {
+        return license;
+    }
+
+    public void setLicense(String license) {
+        this.license = license;
+    }
+
+    public Account getDriver() {
+        return driver;
+    }
+
+    public void setDriver(Account driver) {
+        this.driver = driver;
+    }
+
+    
 }

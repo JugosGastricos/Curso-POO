@@ -9,4 +9,10 @@ public class UberPool extends Car {
         this.brand = brand;
         this.model = model;
     }
+
+    @Override
+    void printDataCar() {
+        super.printDataCar();
+        System.out.println("Brand: " + brand + "\nModel: " + model + "\n");
+    }
 }
