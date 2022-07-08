@@ -1,14 +1,16 @@
-from car import Car
-from account import Account
+from uberX import UberX
+from uberPool import UberPool
+from driver import Driver
 
 if __name__ == "__main__": 
-    print("Hola Mundo")
-    car = Car("AMG063", Account("Mercedes Campuzano", "LOL420"))
-    car.passenger = 4
-    print(vars(car))
-    car.printDataCar()
+    # print("Hola Mundo")
+    
+    uberX = UberX("AMG063", Driver("Mercedes Campuzano", "LOL420"), "Chevrolet", "Spark")
+    uberX.setPassenger(4)
+    print(vars(uberX))
+    uberX.printDataCar()
         
-    car2 = Car("FUK069", Account("Andrea Serna", "69420666"))
-    car2.passenger = 3
-    print(vars(car2))
-    car2.printDataCar()
+    uberPool = UberPool("FUK069", Driver("Andrea Serna", "69420666"), "Volkswagen", "Jetta")
+    uberPool.setPassenger(4)
+    print(vars(uberPool))
+    uberPool.printDataCar()
