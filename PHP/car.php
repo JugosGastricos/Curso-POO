@@ -3,13 +3,12 @@ class Car {
     public $id;
     public $license;
     public $driver;
-    private $passenger;
+    protected $passenger;
     
     public function __construct($license, $driver){
         $this->driver = $driver;
         $this->license = $license;
     }
-
 
     public function getPassengers(){
         return $this->passenger;
@@ -24,11 +23,11 @@ class Car {
         }
     }
 
-    public function printDataCar($brand, $model){
-        if ($brand == "" || $model == "" || $this->passenger == ""){
+    public function printDataCar(){
+        if ($this->driver->name == "" || $this->license == "" || $this->passenger == ""){
             throw new Error('Ingresa todos los datos necesarios');
         } else {
-            echo "License: $this->license <br/>Driver: {$this->driver->name} <br/>Document: {$this->driver->document} <br/>Brand: $brand <br/>Model: $model </br>Passengers: $this->passenger</br><br/>";
+            echo "License: $this->license <br/>Driver: {$this->driver->name} <br/>Document: {$this->driver->document} </br>Passengers: $this->passenger";
         }
     }
 }
